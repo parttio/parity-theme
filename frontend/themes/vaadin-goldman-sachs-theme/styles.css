@@ -1,2 +1,46 @@
 @import url('./main-layout.css');
 @import url('line-awesome/dist/line-awesome/css/line-awesome.min.css');
+@import url('./components/badge.css');
+
+html {
+    --lumo-primary-color: #186ADE;
+
+    --lumo-success-color: #077D55;
+    --lumo-success-color-10pct: #EBF7ED;
+
+    --lumo-error-color: #D91F11;
+    --lumo-error-color-10pct: #FCF3F2;
+
+    --lumo-information-color: var(--lumo-primary-color);
+    --lumo-information-color-10pct: #F0F4FA;
+    --lumo-information-contrast-color: var(--lumo-primary-contrast-color);
+
+    --lumo-warning-color: #F5C518;
+    --lumo-warning-color-10pct: #FAF6CF;
+    --lumo-warning-contrast-color: var(--lumo-contrast);
+
+    --lumo-contrast-5pct: #DCE3E8;
+    --lumo-contrast-40pct: #9FB1BD;
+    --lumo-contrast-50pct: #7A909E;
+    --lumo-contrast: #1C2B36;
+
+    --lumo-shade-10pct: #DCE3E8;
+    --lumo-shade-30pct: #9FB1BD;
+    --lumo-shade-70pct: #5B7282;
+
+    --gm-info-color: #0D1826;
+
+    --lumo-font-size-m: 14px;
+    --lumo-font-size-xxxs: 8px;
+    --lumo-border-radius: 2px;
+}
+
+.appearanceLayout {
+    padding: 3px 4px;
+    background: #F3F3F3;
+}
+
+.contrastLayout {
+    padding: 3px 4px;
+    background: #CCCCCC;
+}

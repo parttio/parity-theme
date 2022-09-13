@@ -1,0 +1,24 @@
+:host([has-label]) ::slotted(label) {
+    padding: var(--lumo-space-xs) var(--lumo-space-s);
+    color: var(--lumo-contrast);
+}
+
+.vaadin-radio-button-container {
+    align-items: center;
+}
+
+[part="radio"] {
+    width: 14px;
+    height: 14px;
+    background: white;
+    border: 1px solid var(--lumo-contrast-40pct);
+}
+
+:host([checked]) [part="radio"] {
+    border: 1px solid var(--lumo-contrast);
+    background-color: var(--lumo-primary-contrast-color);
+}
+
+[part="radio"]::after {
+    border-color: var(--lumo-primary-color);
+}

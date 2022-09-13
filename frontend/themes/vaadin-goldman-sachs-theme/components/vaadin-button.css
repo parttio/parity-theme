@@ -1,0 +1,56 @@
+:host {
+    --_gm-emphasis-text-color: var(--lumo-contrast);
+    --_gm-emphasis-border-color: var(--lumo-contrast-5pct);
+    font-weight: 500;
+    line-height: 20px;
+    padding: 0 16px;
+    color: var(--lumo-contrast);
+    background: var(--lumo-contrast-5pct);
+}
+
+:host([theme~="primary"]) {
+    --_gm-emphasis-text-color: var(--lumo-primary-color);
+    --_gm-emphasis-border-color: var(--lumo-primary-color);
+    font-weight: 500;
+}
+
+:host([theme~="info"]) {
+    --_gm-emphasis-text-color: var(--gm-info-color);
+    --_gm-emphasis-border-color: var(--gm-info-color);
+    color: var(--lumo-tint);
+    background: var(--gm-info-color);
+}
+
+:host([theme~="contrast"]) {
+    --_gm-emphasis-text-color: var(--lumo-tint);
+    --_gm-emphasis-border-color: var(--lumo-tint);
+    color: var(--lumo-contrast);
+    background: var(--lumo-tint);
+}
+
+:host([theme~="destructive"]) {
+    --_gm-emphasis-text-color: var(--lumo-error-color);
+    --_gm-emphasis-border-color: var(--lumo-error-color);
+}
+
+:host([theme~="subtle"]) {
+    color: var(--_gm-emphasis-text-color);
+    border: 1px solid var(--_gm-emphasis-border-color);
+    background: none;
+}
+
+:host([theme~="minimal"]) {
+    color: var(--_gm-emphasis-text-color);
+}
+
+:host([theme~="circle"]) {
+    border-radius: 18px;
+}
+
+:host([theme~="icon"]):host([theme~="circle"]) {
+    border-radius: 50%;
+}
+
+:host([theme~="xl"]) {
+   --lumo-button-size: var(--lumo-size-xl);
+}

@@ -3,7 +3,6 @@ package com.example.application.views;
 
 import com.example.application.components.appnav.AppNav;
 import com.example.application.components.appnav.AppNavItem;
-import com.example.application.views.button.ButtonView;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
@@ -55,7 +54,11 @@ public class MainLayout extends AppLayout {
         AppNav nav = new AppNav();
         nav.addClassNames("app-nav");
 
-        nav.addItem(new AppNavItem("Button", ButtonView.class, "la la-file"));
+        nav.addItem(new AppNavItem("Button", ButtonView.class));
+        nav.addItem(new AppNavItem("Checkbox", CheckboxView.class));
+        nav.addItem(new AppNavItem("Radio Button", RadioButtonView.class));
+        nav.addItem(new AppNavItem("Badge", BadgeView.class));
+        nav.addItem(new AppNavItem("Text Field", TextFieldView.class));
 
         return nav;
     }

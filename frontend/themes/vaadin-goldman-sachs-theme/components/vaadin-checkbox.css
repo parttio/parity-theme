@@ -1,0 +1,36 @@
+:host {
+    color: var(--lumo-contrast);
+}
+
+:host([has-label]) ::slotted(label) {
+    padding: var(--lumo-space-xs) var(--lumo-space-s);
+}
+
+[part="checkbox"] {
+    width: 14px;
+    height: 14px;
+    margin: 2px;
+    background: white;
+    border: 1px solid var(--lumo-contrast-40pct);
+    border-radius: 0;
+    box-sizing: border-box;
+}
+
+.vaadin-checkbox-container {
+    align-items: center;
+}
+
+.vaadin-checkbox-wrapper {
+    display: inline-flex;
+    align-items: center;
+}
+
+:host([indeterminate]) [part='checkbox'] {
+    border: 0;
+}
+
+[part="checkbox"]::after {
+    font-size: 14px;
+    background: var(--lumo-primary-color);
+    border: 0;
+}

@@ -1,0 +1,5 @@
+:host {
+    border-color: var(--lumo-contrast-40pct);
+    border-radius: 1px;
+    background-color: var(--lumo-tint);
+}
