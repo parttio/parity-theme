@@ -6,12 +6,12 @@
     padding: 0 16px;
     color: var(--lumo-contrast);
     background: var(--lumo-contrast-5pct);
+    font-weight: 600;
 }
 
 :host([theme~="primary"]) {
     --_gm-emphasis-text-color: var(--lumo-primary-color);
     --_gm-emphasis-border-color: var(--lumo-primary-color);
-    font-weight: 500;
 }
 
 :host([theme~="info"]) {
@@ -41,6 +41,7 @@
 
 :host([theme~="minimal"]) {
     color: var(--_gm-emphasis-text-color);
+    font-weight: 600;
 }
 
 :host([theme~="circle"]) {

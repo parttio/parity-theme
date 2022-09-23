@@ -24,7 +24,7 @@ public class CheckboxView extends VerticalLayout {
         Checkbox indeterminateBox = new Checkbox("Indeterminate");
         indeterminateBox.setIndeterminate(true);
 
-        HorizontalLayout checkStateLayout = new HorizontalLayout(uncheckedBox, checkedBox,indeterminateBox);
+        HorizontalLayout checkStateLayout = new HorizontalLayout(uncheckedBox, checkedBox, indeterminateBox);
         add(checkStateLayout);
 
         add(new H4("Orientation"));

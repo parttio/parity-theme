@@ -128,14 +128,14 @@ public class ButtonView extends VerticalLayout {
         Button squareButton = new Button("Square");
         squareButton.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
 
-        Button squareIconButton = new Button(new Icon(VaadinIcon.PLUS));
+        Button squareIconButton = new Button(new Icon(VaadinIcon.PAPERPLANE));
         squareIconButton.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
 
         Button circleButton = new Button("Circle");
         circleButton.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
         circleButton.addThemeName("circle");
 
-        Button circleIconButton = new Button(new Icon(VaadinIcon.PLUS));
+        Button circleIconButton = new Button(new Icon(VaadinIcon.PAPERPLANE));
         circleIconButton.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
         circleIconButton.addThemeName("circle");
 

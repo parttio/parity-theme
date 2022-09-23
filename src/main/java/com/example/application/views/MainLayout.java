@@ -59,6 +59,11 @@ public class MainLayout extends AppLayout {
         nav.addItem(new AppNavItem("Radio Button", RadioButtonView.class));
         nav.addItem(new AppNavItem("Badge", BadgeView.class));
         nav.addItem(new AppNavItem("Text Field", TextFieldView.class));
+        nav.addItem(new AppNavItem("Number Field", NumberFieldView.class));
+        nav.addItem(new AppNavItem("Password Field", PasswordFieldView.class));
+        nav.addItem(new AppNavItem("Text Area", TextAreaView.class));
+        nav.addItem(new AppNavItem("Combo Box", ComboBoxView.class));
+        nav.addItem(new AppNavItem("Select", SelectView.class));
 
         return nav;
     }

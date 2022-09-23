@@ -1,0 +1,24 @@
+:host(:hover:not([readonly]):not([focused])) [part='input-field']::after {
+    opacity: 0;
+}
+
+[part='input-field'] {
+    color: var(--lumo-contrast);
+    background-color: var(--lumo-tint);
+    border-radius: var(--lumo-border-radius);
+    border: 1px solid var(--lumo-contrast-40pct);
+}
+
+:host([focused]:not([readonly])) [part='label'] {
+    color: var(--lumo-shade-80pct);
+}
+
+:host([focused]:not([readonly])) [part='input-field'] {
+    border-color: var(--lumo-primary-color);
+}
+
+[part='label'] {
+    color: var(--lumo-shade-80pct);
+    font-weight: 600;
+    font-size: var(--lumo-font-size-m);
+}

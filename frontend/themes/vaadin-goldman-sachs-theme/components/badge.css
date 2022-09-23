@@ -6,6 +6,7 @@
     color: var(--lumo-primary-contrast-color);
     background-color: var(--_gm-style-color);
     font-size: 12px;
+    font-weight: 600;
     border-radius: 1.5px;
     text-transform: uppercase;
     padding-left: 8px;
@@ -34,7 +35,6 @@
     --_gm-subtle-background-color: var(--lumo-information-color-10pct);
     color: var(--lumo-information-contrast-color);
     background-color: var(--_gm-style-color);
-    font-weight: 400; /* review after adding the right font family */
 }
 
 [theme~="badge"][theme~="warning"] {
@@ -44,20 +44,17 @@
     --_gm-minimal-text-color: #D9A514;
     color: var(--lumo-warning-contrast-color);
     background-color: var(--_gm-style-color);
-    font-weight: 600; /* review after adding the right font family */
 }
 
 [theme~="badge"][theme~="subtle"] {
     color: var(--_gm-subtle-text-color);
     background-color: var(--_gm-subtle-background-color);
-    font-weight: 600;
 }
 
 [theme~="badge"][theme~="minimal"] {
     color: var(--_gm-minimal-text-color);
     background: none;
     border: 1px solid var(--lumo-shade-30pct);
-    font-weight: 600;
 }
 
 [theme~="badge"][theme~="large"] {

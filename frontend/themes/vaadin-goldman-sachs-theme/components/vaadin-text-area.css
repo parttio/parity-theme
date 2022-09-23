@@ -1,0 +1,50 @@
+[part='input-field'] {
+    background-color: var(--lumo-tint);
+    border: 1px solid var(--lumo-contrast-40pct);
+    padding-right: 4px;
+    padding-left: 4px;
+}
+
+[part='label'] {
+    color: var(--lumo-shade-80pct);
+    font-weight: 600;
+    font-size: var(--lumo-font-size-m);
+}
+
+[part='helper-text'] {
+    color: var(--lumo-shade-80pct);
+}
+
+:host([focused]:not([readonly])) [part='label'] {
+    color: var(--lumo-shade-80pct);
+}
+
+:host([focused]:not([readonly])) [part='input-field'] {
+    border-color: var(--lumo-primary-color);
+}
+
+:host(:hover:not([readonly]):not([focused]):not([invalid])) [part="input-field"] {
+    background-color: var(--lumo-tint);
+}
+
+:host([theme~="large"]) {
+  font-size: var(--lumo-font-size-l);
+  --lumo-text-field-size: var(--lumo-size-l);
+}
+
+:host([theme~="large"]) [part="label"] {
+  font-size: var(--lumo-font-size-l);
+}
+
+:host([theme~="large"]) [part="helper-text"] {
+  font-size: var(--lumo-font-size-s);
+}
+
+:host([theme~="readonly"]) [part="input-field"] {
+    background-color: var(--lumo-shade-20pct);
+    border-color: var(--lumo-contrast-5pct);
+}
+
+:host(:hover[theme~="readonly"]:not([focused]):not([invalid])) [part="input-field"] {
+    background-color: var(--lumo-shade-20pct);
+}

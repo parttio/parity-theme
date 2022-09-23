@@ -1,0 +1,35 @@
+[part='input-field'] {
+    background-color: var(--lumo-tint);
+    border: 1px solid var(--lumo-contrast-40pct);
+}
+
+[part='label'] {
+    color: var(--lumo-shade-80pct);
+    font-weight: 600;
+    font-size: var(--lumo-font-size-m);
+}
+
+[part='helper-text'] {
+    color: var(--lumo-shade-80pct);
+}
+
+:host([focused]:not([readonly])) [part='label'] {
+    color: var(--lumo-shade-80pct);
+}
+
+:host([focused]:not([readonly])) [part='input-field'] {
+    border-color: var(--lumo-primary-color);
+}
+
+:host(:hover:not([readonly]):not([focused]):not([invalid])) [part="input-field"]::after {
+    background-color: var(--lumo-tint);
+}
+
+[part="toggle-button"] {
+    color: var(--lumo-shade-30pct);
+}
+
+::slotted(:is(input, textarea):placeholder-shown) {
+    color: var(--lumo-contrast-40pct);
+    font-weight: 400;
+}
