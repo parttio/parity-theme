@@ -19,6 +19,7 @@ html {
     --lumo-warning-color-10pct: #FAF6CF;
     --lumo-warning-contrast-color: var(--lumo-contrast);
 
+    --lumo-shade-5pct: #ECEFF2;
     --lumo-shade-10pct: #DCE3E8;
     --lumo-shade-20pct: #D4D9DC;
     --lumo-shade-30pct: #9FB1BD;

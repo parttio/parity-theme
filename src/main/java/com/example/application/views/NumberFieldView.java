@@ -23,13 +23,7 @@ public class NumberFieldView extends VerticalLayout {
         Div prefix = new Div(new Text("$"));
         leadingTextField.setPrefixComponent(prefix);
 
-        NumberField trailingTextField = new NumberField();
-        trailingTextField.setLabel("Balance");
-        trailingTextField.setValue(200.0);
-        Div suffix = new Div(new Text("€"));
-        trailingTextField.setSuffixComponent(suffix);
-
-        HorizontalLayout basicLayout = new HorizontalLayout(leadingTextField, trailingTextField);
+        HorizontalLayout basicLayout = new HorizontalLayout(leadingTextField);
         add(basicLayout);
 
         add(new H4("Stepper Controls"));

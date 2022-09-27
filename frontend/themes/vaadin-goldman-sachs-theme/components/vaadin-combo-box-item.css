@@ -1,0 +1,17 @@
+:host {
+    padding-left: 14px;
+    padding-right: 14px;
+    border-radius: 0px;
+}
+
+:host([selected]) [part="checkmark"]::before {
+    opacity: 0;
+}
+
+[part="checkmark"]::before {
+    display: none;
+}
+
+:host(:hover:not([disabled])) {
+   background-color: var(--lumo-shade-5pct);
+}

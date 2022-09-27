@@ -22,3 +22,18 @@
     font-weight: 600;
     font-size: var(--lumo-font-size-m);
 }
+
+/*[part='decrease-button'] {
+  align-items: center;
+  display: flex;
+  height: calc(var(--lumo-text-field-size) / 2);
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: calc(var(--lumo-text-field-size) / 2);
+}
+
+[part='decrease-button']::before {
+  margin: 0;
+}*/

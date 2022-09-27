@@ -34,3 +34,8 @@
     background: var(--lumo-primary-color);
     border: 0;
 }
+
+:host(:not([checked]):not([indeterminate]):not([disabled]):hover) [part="checkbox"] {
+  background-color: var(--lumo-tint);
+  border-color: var(--lumo-contrast-50pct);
+}

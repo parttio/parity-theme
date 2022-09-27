@@ -50,14 +50,11 @@ public class TextAreaView extends VerticalLayout {
         add(smallTextArea);
 
         TextArea readonlyTextArea = new TextArea();
-        readonlyTextArea.addThemeName("readonly");
+        readonlyTextArea.setReadOnly(true);
         readonlyTextArea.setWidth("400px");
         readonlyTextArea.setLabel("Read-Only");
         readonlyTextArea.setMaxLength(charLimit);
         readonlyTextArea.setValueChangeMode(ValueChangeMode.EAGER);
-        readonlyTextArea.addValueChangeListener(e -> {
-            e.getSource().setHelperText(e.getValue().length() + "/" + charLimit);
-        });
         readonlyTextArea.setValue(loremIpsum);
         add(readonlyTextArea);
     }

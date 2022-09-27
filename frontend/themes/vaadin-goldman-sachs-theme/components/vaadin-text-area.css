@@ -45,6 +45,7 @@
     border-color: var(--lumo-contrast-5pct);
 }
 
-:host(:hover[theme~="readonly"]:not([focused]):not([invalid])) [part="input-field"] {
+:host([readonly]) [part="input-field"] {
     background-color: var(--lumo-shade-20pct);
+    border: 1px solid var(--lumo-shade-10pc);
 }
