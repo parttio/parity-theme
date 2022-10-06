@@ -1,0 +1,11 @@
+[part="overlay"] {
+    min-width: 550px;
+}
+
+[part="content"] {
+    padding-bottom: 0.714rem;
+}
+
+[part="content"] [part="message"] {
+    line-height: 1.429rem;
+}

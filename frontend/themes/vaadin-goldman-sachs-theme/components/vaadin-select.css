@@ -1,0 +1,7 @@
+@import url('common-input-field.css');
+@import url('common-field-label.css');
+
+:host([opened]) [part="toggle-button"]::before {
+    transform: rotate(180deg);
+    color: var(--lumo-contrast);
+}

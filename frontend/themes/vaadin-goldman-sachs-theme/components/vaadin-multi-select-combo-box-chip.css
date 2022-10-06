@@ -1,0 +1,16 @@
+:host {
+    --lumo-border-radius-s: 1em;
+    background-color: var(--lumo-primary-color-10pct);
+    color: var(--gm-primary-dark-color);
+    padding-left: 0.82em;
+}
+
+[part$="button"] {
+    color: var(--gm-primary-dark-color);
+    opacity: 0.6;
+    padding-right: 0.1em;
+}
+
+:host([part~="overflow"])::before, :host([part~="overflow"])::after {
+	border-color: var(--lumo-primary-color-10pct);
+}

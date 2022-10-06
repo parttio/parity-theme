@@ -24,3 +24,8 @@
     color: var(--lumo-primary-color);
     font-weight: 500;
 }
+
+::slotted(:not([selected])) [part="content"] {
+    color: var(--lumo-contrast-40pct);
+    font-weight: 400;
+}

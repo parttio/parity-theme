@@ -4,6 +4,8 @@
 
 html {
     --lumo-primary-color: #186ADE;
+    --lumo-primary-color-10pct: #D4E4FA;
+    --lumo-primary-color-50pct: #525fe8;
 
     --lumo-success-color: #077D55;
     --lumo-success-color-10pct: #EBF7ED;
@@ -26,12 +28,17 @@ html {
     --lumo-shade-70pct: #5B7282;
     --lumo-shade-80pct: #3E5463;
 
-    --lumo-contrast-5pct: #DCE3E8;
+    --lumo-contrast-5pct: var(--lumo-shade-10pct);
     --lumo-contrast-40pct: var(--lumo-shade-30pct);
     --lumo-contrast-50pct: #7A909E;
     --lumo-contrast: #1C2B36;
 
+    --lumo-primary-text-color: var(--lumo-primary-color);
+    --lumo-disabled-text-color: #B4C2CC;
+
     --gm-info-color: #0D1826;
+    --gm-primary-dark-color: #0D4EA6;
+    --gm-divider-color: var(--lumo-shade-10pct);
 
     --lumo-font-size-l: 16px;
     --lumo-font-size-m: 14px;
@@ -52,4 +59,9 @@ html {
 .contrastLayout {
     padding: 3px 4px;
     background: #5b7181;
+}
+
+vaadin-select-list-box hr {
+    margin: 0.125rem 0px;
+    background-color: var(--gm-divider-color);
 }

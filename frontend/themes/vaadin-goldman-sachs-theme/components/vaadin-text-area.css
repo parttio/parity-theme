@@ -1,26 +1,9 @@
+@import url('common-input-field.css');
+@import url('common-field-label.css');
+
 [part='input-field'] {
-    background-color: var(--lumo-tint);
-    border: 1px solid var(--lumo-contrast-40pct);
     padding-right: 4px;
     padding-left: 4px;
-}
-
-[part='label'] {
-    color: var(--lumo-shade-80pct);
-    font-weight: 600;
-    font-size: var(--lumo-font-size-m);
-}
-
-[part='helper-text'] {
-    color: var(--lumo-shade-80pct);
-}
-
-:host([focused]:not([readonly])) [part='label'] {
-    color: var(--lumo-shade-80pct);
-}
-
-:host([focused]:not([readonly])) [part='input-field'] {
-    border-color: var(--lumo-primary-color);
 }
 
 :host(:hover:not([readonly]):not([focused]):not([invalid])) [part="input-field"] {

@@ -1,0 +1,17 @@
+[part="toolbar"] {
+    padding: calc(var(--lumo-space-s) - 1px) var(--lumo-space-s) var(--lumo-space-s);
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    border-top: 1px solid var(--gm-divider-color);
+    margin-right: 0;
+    background-color: var(--lumo-tint);
+    border-radius: 0 0 var(--lumo-border-radius) var(--lumo-border-radius);
+}
+
+[part="today-button"] {
+    color: var(--lumo-primary-color);
+}
+
+[part="years"] [part="year-number"][current] {
+  font-weight: 600;
+}

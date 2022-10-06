@@ -14,6 +14,7 @@ public class SelectView extends VerticalLayout {
         select.setLabel("Top label");
         select.setItems("Item 1", "Item 2", "Item 3", "Item 4");
         select.setPlaceholder("Select an item");
+        select.setHelperText("Supportive text");
         select.setItemEnabledProvider(item -> !"Item 1".equals(item));
         add(select);
 

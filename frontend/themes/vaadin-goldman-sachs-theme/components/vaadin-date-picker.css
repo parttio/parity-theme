@@ -1,0 +1,14 @@
+@import url('common-input-field.css');
+@import url('common-field-label.css');
+
+:host {
+    --vaadin-field-default-width: 18rem;
+}
+
+:host([focused]:not([readonly])) [part='input-field'] {
+    border-color: var(--lumo-shade-30pct);
+}
+
+[part="toggle-button"] {
+    color: var(--lumo-contrast);
+}

@@ -1,20 +1,12 @@
+@import url('common-input-field.css');
+@import url('common-field-label.css');
+
+::slotted(:not([slot$="fix"])) {
+    padding-right: 1.586em;
+}
+
 :host(:hover:not([readonly]):not([focused])) [part='input-field']::after {
     opacity: 0;
-}
-
-[part='input-field'] {
-    color: var(--lumo-contrast);
-    background-color: var(--lumo-tint);
-    border-radius: var(--lumo-border-radius);
-    border: 1px solid var(--lumo-contrast-40pct);
-}
-
-:host([focused]:not([readonly])) [part='label'] {
-    color: var(--lumo-shade-80pct);
-}
-
-:host([focused]:not([readonly])) [part='input-field'] {
-    border-color: var(--lumo-primary-color);
 }
 
 [part='label'] {
@@ -23,7 +15,54 @@
     font-size: var(--lumo-font-size-m);
 }
 
-/*[part='decrease-button'] {
+[part="decrease-button"]::before {
+  content: var(--lumo-icons-chevron-down);
+}
+
+[part="increase-button"]::before {
+  content: var(--lumo-icons-chevron-up);
+}
+
+:host([has-controls]) [part='increase-button'] {
+    height: calc(var(--lumo-text-field-size) / 2);
+    position: absolute;
+    right: 0px;
+    top: 0;
+    border-bottom: 1px solid var(--lumo-shade-10pct);
+}
+
+:host([has-controls]) [part='decrease-button'] {
+    height: calc(var(--lumo-text-field-size) / 2);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+:host([has-controls]) [part='decrease-button'],
+:host([has-controls]) [part='increase-button'] {
+    border-left: 1px solid var(--lumo-shade-10pct);
+    width: calc(var(--lumo-text-field-size) / 1.5);
+}
+
+[part$="button"][disabled] {
+    opacity: 1;
+}
+
+[part$="button"][disabled]::before{
+  opacity: 0.2;
+}
+
+:host([has-controls]) [part='increase-button']::before,
+:host([has-controls]) [part='decrease-button']::before {
+  margin: 0;
+}
+
+:host([has-controls]:not([theme~="align-right"])) ::slotted(input) {
+  text-align: left;
+}
+
+/*:host([has-controls]) [part='decrease-button'] {
   align-items: center;
   display: flex;
   height: calc(var(--lumo-text-field-size) / 2);
@@ -32,8 +71,4 @@
   right: 0;
   top: 0;
   width: calc(var(--lumo-text-field-size) / 2);
-}
-
-[part='decrease-button']::before {
-  margin: 0;
 }*/

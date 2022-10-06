@@ -1,0 +1,18 @@
+[part='input-field'],
+:host(:hover:not([readonly]):not([focused]):not([invalid])) [part="input-field"]::after {
+    background-color: var(--lumo-tint);
+    border: 1px solid var(--lumo-contrast-40pct);
+}
+
+:host([focused]:not([readonly])) [part='input-field'] {
+    border-color: var(--lumo-primary-color);
+}
+
+[part='helper-text'] {
+    color: var(--lumo-shade-80pct);
+}
+
+::slotted(:is(input, textarea):placeholder-shown) {
+    color: var(--lumo-contrast-40pct);
+    font-weight: 400;
+}

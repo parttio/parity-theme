@@ -1,0 +1,14 @@
+:host {
+    line-height: 1.429rem;
+}
+
+[part="row"]:only-child [part~="header-cell"] {
+  min-height: var(--lumo-size-xl);
+}
+
+[part~="header-cell"] ::slotted(vaadin-grid-cell-content),
+[part~="footer-cell"] ::slotted(vaadin-grid-cell-content),
+[part~="reorder-ghost"] {
+  font-size: var(--lumo-font-size-m);
+  color: var(--lumo-shade-80pct);
+}

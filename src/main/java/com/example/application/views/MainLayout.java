@@ -64,6 +64,14 @@ public class MainLayout extends AppLayout {
         nav.addItem(new AppNavItem("Text Area", TextAreaView.class));
         nav.addItem(new AppNavItem("Combo Box", ComboBoxView.class));
         nav.addItem(new AppNavItem("Select", SelectView.class));
+        nav.addItem(new AppNavItem("Date Picker", DatePickerView.class));
+        nav.addItem(new AppNavItem("Time Picker", TimePickerView.class));
+        nav.addItem(new AppNavItem("Date Time Picker", DateTimePickerView.class));
+        nav.addItem(new AppNavItem("Dialog", DialogView.class));
+        nav.addItem(new AppNavItem("Confirm Dialog", ConfirmDialogView.class));
+        nav.addItem(new AppNavItem("Grid (data tables)", GridView.class));
+        nav.addItem(new AppNavItem("Tabs", TabsView.class));
+        nav.addItem(new AppNavItem("List Box", ListBoxView.class));
 
         return nav;
     }

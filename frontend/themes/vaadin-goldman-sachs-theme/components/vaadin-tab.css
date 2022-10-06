@@ -1,0 +1,67 @@
+:host {
+    padding: 0.5rem 0.571em;
+    line-height: 1.429em;
+}
+
+:host::before, :host::after {
+    left: 0.5rem;
+    right: 0.5rem;
+    width: auto;
+    border-radius: 0;
+    transform: scale(0);
+    margin: 0;
+}
+
+:host::after {
+    box-shadow: 0 0 0 2px var(--lumo-primary-color-50pct);
+}
+
+:host([selected])::before, :host([selected])::after {
+    transform: scale(1);
+}
+
+:host([disabled]) {
+    opacity: 0.5;
+    color: var(--lumo-disabled-text-color);
+}
+
+:host([orientation="vertical"]) {
+    min-height: 2.857em;
+}
+
+:host([orientation="vertical"])::before,
+:host([orientation="vertical"])::after {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transform: scale(0);
+    width: 2px;
+    height: auto;
+    border-radius: 0;
+    transform-origin: 100% 50%;
+}
+
+:host([orientation="vertical"][selected])::before,
+:host([orientation="vertical"][selected])::after {
+    transform: scale(1);
+}
+
+:host([theme~="icon-on-top"]) {
+    flex-direction: row;
+    padding-top: 0.5rem;
+}
+
+:host ::slotted(vaadin-icon[icon^="vaadin:"]),
+:host ::slotted(iron-icon[icon^="vaadin:"]) {
+    padding: 0.12rem;
+}
+
+:host ::slotted(vaadin-icon),
+:host ::slotted(iron-icon) {
+    margin: 0 6px;
+}
+
+:host([theme~="icon-on-top"]) ::slotted(vaadin-icon),
+:host([theme~="icon-on-top"]) ::slotted(iron-icon) {
+  margin: 0 5px 0 0;
+}

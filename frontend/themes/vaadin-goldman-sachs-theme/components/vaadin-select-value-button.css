@@ -1,0 +1,4 @@
+[part="input-field"] ::slotted([slot="value"][placeholder]) {
+    color: var(--lumo-contrast-40pct);
+    font-weight: 400;
+}

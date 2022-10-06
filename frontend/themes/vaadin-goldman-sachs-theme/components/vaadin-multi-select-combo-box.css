@@ -1,9 +1,6 @@
 @import url('common-input-field.css');
 @import url('common-field-label.css');
 
-::slotted(iron-icon), ::slotted(vaadin-icon) {
-  color: var(--lumo-contrast);
-}
 
 [part="toggle-button"] {
     color: var(--lumo-shade-30pct);

@@ -1,0 +1,47 @@
+[part="content"] {
+    padding-left: 0.653em;
+}
+
+:host([selected]) [part="content"] {
+    color: var(--lumo-primary-color);
+    font-weight: 500;
+}
+
+[part="checkmark"] {
+    position: relative;
+    transition: transform 0.2s cubic-bezier(0.12, 0.32, 0.54, 2), background-color 0.15s;
+}
+
+[part="checkmark"]::before {
+    display: block;
+    font-size: calc(var(--lumo-size-m) / 2.2);
+    line-height: 1;
+    color: var(--lumo-primary-contrast-color);
+    position: absolute;
+    top: 0.23em;
+    left: -0.045em;
+}
+
+:host([selected]) [part="checkmark"]::before {
+    opacity: 1;
+}
+
+[part='checkmark']::after {
+    content: "";
+    width: 1em;
+    height: 1em;
+    background-color: white;
+    margin: calc((1 - var(--lumo-line-height-xs)) * var(--lumo-font-size-m) / 2) 0;
+    display: inline-block;
+    border: 1px solid var(--lumo-contrast-40pct);
+    box-sizing: border-box;
+}
+
+:host(:hover:not([disabled])) [part="checkmark"]::after {
+    border-color: var(--lumo-contrast-50pct);
+}
+
+:host([selected]) [part="checkmark"]::after {
+    background-color: var(--lumo-primary-color);
+    border: none;
+}

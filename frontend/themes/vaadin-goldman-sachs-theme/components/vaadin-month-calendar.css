@@ -1,0 +1,24 @@
+[part="date"]::before {
+    border-radius: 0;
+}
+
+[part="date"]:not(:empty):not([disabled]):not([selected]):hover::before {
+    background-color: var(--lumo-shade-30pct);
+    opacity: 0.2;
+}
+
+[part="date"][focused]::before {
+    box-shadow: none;
+}
+
+[part="date"][today]::before {
+    border: 1px solid var(--lumo-primary-color);
+}
+
+[part="date"][today][selected]::before {
+    border: none;
+}
+
+[part="date"][today]:hover::before {
+    border: none;
+}

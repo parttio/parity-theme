@@ -1,0 +1,6 @@
+@import url('common-input-field.css');
+@import url('common-field-label.css');
+
+[part='toggle-button'] {
+    color: var(--lumo-contrast);
+}
