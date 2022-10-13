@@ -10,6 +10,10 @@
     width: 18em;
 }
 
+:host([has-label]) {
+  padding-top: calc(var(--lumo-space-m) + 0.25rem);
+}
+
 :host(:hover:not([readonly]):not([focused])) [part='input-field']::after {
     opacity: 0;
 }

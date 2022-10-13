@@ -72,6 +72,8 @@ public class MainLayout extends AppLayout {
         nav.addItem(new AppNavItem("Grid (data tables)", GridView.class));
         nav.addItem(new AppNavItem("Tabs", TabsView.class));
         nav.addItem(new AppNavItem("List Box", ListBoxView.class));
+        nav.addItem(new AppNavItem("Log in", LoginView.class));
+        nav.addItem(new AppNavItem("Accordion", AccordionView.class));
 
         return nav;
     }

@@ -1,0 +1,35 @@
+:host {
+    line-height: var(--lumo-line-height-m);
+}
+
+:host ::slotted(vaadin-item) {
+    border-radius: 0;
+    box-shadow: inset 0px 1px 0px var(--lumo-contrast-10pct);
+    flex-direction: row-reverse;
+    padding: 0;
+}
+
+:host ::slotted(vaadin-item:nth-child(1)) {
+    box-shadow: none;
+}
+
+:host ::slotted(vaadin-item:hover:not([disabled])) {
+    background-color: var(--lumo-shade-5pct);
+}
+
+:host ::slotted(vaadin-item[selected]) {
+    box-shadow: none;
+    background-color: var(--lumo-primary-color-10pct);
+}
+
+:host ::slotted(vaadin-item[selected]:hover:not([disabled])) {
+    background-color: var(--lumo-primary-color-20pct);
+}
+
+:host([theme~="padding-small"]) ::slotted(vaadin-item) {
+    padding: 0 calc(var(--lumo-space-s) + 0.071rem);
+}
+
+:host([theme~="padding-medium"]) ::slotted(vaadin-item) {
+    padding: 0 calc(var(--lumo-space-m) + 0.143rem);
+}

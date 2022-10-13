@@ -5,6 +5,7 @@
 html {
     --lumo-primary-color: #186ADE;
     --lumo-primary-color-10pct: #D4E4FA;
+    --lumo-primary-color-20pct: #D4D9FA;
     --lumo-primary-color-50pct: #525fe8;
 
     --lumo-success-color: #077D55;
@@ -51,17 +52,11 @@ html {
     --lumo-body-text-color: var(--lumo-contrast);
 }
 
-.appearanceLayout {
-    padding: 3px 4px;
-    background: #F3F3F3;
-}
-
-.contrastLayout {
-    padding: 3px 4px;
-    background: #5b7181;
-}
-
 vaadin-select-list-box hr {
     margin: 0.125rem 0px;
     background-color: var(--gm-divider-color);
+}
+
+vaadin-item::part(checkmark)::before {
+    color: var(--lumo-contrast);
 }

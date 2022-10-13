@@ -1,0 +1,16 @@
+[part="form"] {
+  padding-bottom: calc(var(--lumo-space-l) - 0.5em);
+}
+
+[part="form-title"] {
+    margin-top: 0;
+    font-size: calc(var(--lumo-font-size-xxl) - 0.09em);
+}
+
+[part="error-message"] [part="error-message-title"] {
+    font-size: calc(var(--lumo-font-size-m) - 0.036em);
+}
+
+#forgotPasswordButton {
+    margin: auto;
+}
