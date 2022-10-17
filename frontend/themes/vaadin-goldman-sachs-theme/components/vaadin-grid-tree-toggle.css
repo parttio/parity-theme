@@ -1,0 +1,3 @@
+:host {
+    --vaadin-grid-tree-toggle-level-offset: 1em;
+}

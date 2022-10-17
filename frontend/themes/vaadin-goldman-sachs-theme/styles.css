@@ -40,6 +40,7 @@ html {
     --gm-info-color: #0D1826;
     --gm-primary-dark-color: #0D4EA6;
     --gm-divider-color: var(--lumo-shade-10pct);
+    --gm-tint-90pct: #F2F5F7;
 
     --lumo-font-size-l: 16px;
     --lumo-font-size-m: 14px;
@@ -57,6 +58,6 @@ vaadin-select-list-box hr {
     background-color: var(--gm-divider-color);
 }
 
-vaadin-item::part(checkmark)::before {
+vaadin-list-box vaadin-item::part(checkmark)::before {
     color: var(--lumo-contrast);
 }

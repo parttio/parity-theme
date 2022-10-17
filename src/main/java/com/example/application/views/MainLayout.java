@@ -70,6 +70,7 @@ public class MainLayout extends AppLayout {
         nav.addItem(new AppNavItem("Dialog", DialogView.class));
         nav.addItem(new AppNavItem("Confirm Dialog", ConfirmDialogView.class));
         nav.addItem(new AppNavItem("Grid (data tables)", GridView.class));
+        nav.addItem(new AppNavItem("Tree grid", TreeGridView.class));
         nav.addItem(new AppNavItem("Tabs", TabsView.class));
         nav.addItem(new AppNavItem("List Box", ListBoxView.class));
         nav.addItem(new AppNavItem("Log in", LoginView.class));
