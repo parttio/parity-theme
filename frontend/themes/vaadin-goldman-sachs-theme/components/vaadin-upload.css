@@ -1,0 +1,12 @@
+:host(:not([nodrop])) {
+    border: 1px solid var(--lumo-contrast-10pct);
+    border-radius: 0;
+}
+
+[part="file-list"] > :first-child {
+    padding: var(--lumo-space-s) 0 0;
+}
+
+[part="file-list"] > :not(:first-child) > * {
+    border-top: 1px solid var(--lumo-contrast-10pct);
+}

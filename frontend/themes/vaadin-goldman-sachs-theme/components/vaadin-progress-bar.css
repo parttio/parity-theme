@@ -1,0 +1,12 @@
+[part="bar"] {
+    border-radius: 0;
+    background-color: var(--lumo-contrast-5pct);
+}
+
+[part="value"] {
+    border-radius: 0;
+}
+
+:host([indeterminate]) [part="value"] {
+    opacity: 0.90;
+}

@@ -54,27 +54,33 @@ public class MainLayout extends AppLayout {
         AppNav nav = new AppNav();
         nav.addClassNames("app-nav");
 
+        nav.addItem(new AppNavItem("Accordion", AccordionView.class));
+        nav.addItem(new AppNavItem("Avatar", AvatarView.class));
+        nav.addItem(new AppNavItem("Badge", BadgeView.class));
         nav.addItem(new AppNavItem("Button", ButtonView.class));
         nav.addItem(new AppNavItem("Checkbox", CheckboxView.class));
+        nav.addItem(new AppNavItem("Combo Box", ComboBoxView.class));
+        nav.addItem(new AppNavItem("Confirm Dialog", ConfirmDialogView.class));
+        nav.addItem(new AppNavItem("Context Menu", ContextMenuView.class));
         nav.addItem(new AppNavItem("Radio Button", RadioButtonView.class));
-        nav.addItem(new AppNavItem("Badge", BadgeView.class));
-        nav.addItem(new AppNavItem("Text Field", TextFieldView.class));
         nav.addItem(new AppNavItem("Number Field", NumberFieldView.class));
         nav.addItem(new AppNavItem("Password Field", PasswordFieldView.class));
-        nav.addItem(new AppNavItem("Text Area", TextAreaView.class));
-        nav.addItem(new AppNavItem("Combo Box", ComboBoxView.class));
         nav.addItem(new AppNavItem("Select", SelectView.class));
         nav.addItem(new AppNavItem("Date Picker", DatePickerView.class));
-        nav.addItem(new AppNavItem("Time Picker", TimePickerView.class));
         nav.addItem(new AppNavItem("Date Time Picker", DateTimePickerView.class));
         nav.addItem(new AppNavItem("Dialog", DialogView.class));
-        nav.addItem(new AppNavItem("Confirm Dialog", ConfirmDialogView.class));
         nav.addItem(new AppNavItem("Grid (data tables)", GridView.class));
         nav.addItem(new AppNavItem("Tree grid", TreeGridView.class));
         nav.addItem(new AppNavItem("Tabs", TabsView.class));
         nav.addItem(new AppNavItem("List Box", ListBoxView.class));
         nav.addItem(new AppNavItem("Log in", LoginView.class));
-        nav.addItem(new AppNavItem("Accordion", AccordionView.class));
+        nav.addItem(new AppNavItem("Message List", MessageList.class));
+        nav.addItem(new AppNavItem("Message Input", MessageInput.class));
+        nav.addItem(new AppNavItem("progress Bar", ProgressBarView.class));
+        nav.addItem(new AppNavItem("Upload", UploadView.class));
+        nav.addItem(new AppNavItem("Text Area", TextAreaView.class));
+        nav.addItem(new AppNavItem("Text Field", TextFieldView.class));
+        nav.addItem(new AppNavItem("Time Picker", TimePickerView.class));
 
         return nav;
     }
