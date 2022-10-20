@@ -15,16 +15,13 @@ import com.vaadin.flow.router.Route;
 public class AccordionView extends VerticalLayout {
     public AccordionView() {
         add(new H4("Basic"));
-        Component accordionBasic = createAccordion();
-        add(accordionBasic);
+        add(createAccordion());
 
         add(new H4("Filled"));
-        Component accordionFilled = createAccordionVariant(DetailsVariant.FILLED);
-        add(accordionFilled);
+        add(createAccordionVariant(DetailsVariant.FILLED));
 
         add(new H4("Reverse"));
-        Component accordionReverse = createAccordionVariant(DetailsVariant.REVERSE);
-        add(accordionReverse);
+        add(createAccordionVariant(DetailsVariant.REVERSE));
     }
 
     private Accordion createAccordionVariant(DetailsVariant variant) {
@@ -51,7 +48,6 @@ public class AccordionView extends VerticalLayout {
 
         return accordion;
     }
-
     private VerticalLayout content() {
         Span name = new Span("Sophia Williams");
         Span email = new Span("sophia.williams@company.com");
@@ -63,4 +59,5 @@ public class AccordionView extends VerticalLayout {
 
         return informationLayout;
     }
+
 }

@@ -1,0 +1,13 @@
+:host {
+    font-weight: 600;
+    color: var(--lumo-contrast);
+    background-color: var(--lumo-shade-10pct);
+}
+
+:host(:first-of-type) {
+    border-radius: var(--lumo-border-radius) 0 0 var(--lumo-border-radius);
+}
+
+:host(:nth-last-of-type(2)), :host([part="overflow-button"]) {
+    border-radius: 0 var(--lumo-border-radius) var(--lumo-border-radius) 0;
+}

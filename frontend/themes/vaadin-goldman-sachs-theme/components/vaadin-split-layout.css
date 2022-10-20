@@ -1,0 +1,3 @@
+[part="handle"]::after {
+    background-color: var(--lumo-shade-30pct);
+}

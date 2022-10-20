@@ -1,0 +1,26 @@
+[part="summary"],
+[part="toggle"] {
+    color: var(--lumo-contrast);
+}
+
+[part="summary"] {
+    padding: var(--lumo-space-s) calc(var(--lumo-space-xs) + 0.143rem);
+    border-radius: 0;
+}
+
+:host(:not([disabled])) [part="summary"]:hover,
+:host(:not([disabled])) [part="summary"]:hover [part="toggle"] {
+    color: var(--lumo-contrast);
+}
+
+:host(:not([disabled])) [part="summary"]:hover {
+    background: var(--lumo-shade-5pct);
+}
+
+:host([theme~="reverse"]) [part="summary"] {
+    padding: var(--lumo-space-s) calc(var(--lumo-space-xs) + 0.143rem) var(--lumo-space-s) 0;
+}
+
+:host([theme~="filled"]) {
+    border-radius: 0;
+}

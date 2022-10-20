@@ -1,0 +1,14 @@
+:host([theme~="monotone"]) {
+      --vaadin-charts-color-0: #0D4EA6;
+      --vaadin-charts-color-1: #E86427;
+      --vaadin-charts-color-2: #279C9C;
+      --vaadin-charts-color-3: #D9A514;
+      --vaadin-charts-color-4: #AC71F0;
+      --vaadin-charts-color-5: #23254D;
+      --vaadin-charts-color-6: #52A31D;
+      --vaadin-charts-color-7: #CC1D92;
+      --vaadin-charts-color-8: #48B8F0;
+      --vaadin-charts-color-9: #077D55;
+      --vaadin-charts-color-positive: var(--vaadin-charts-color-3);
+      --vaadin-charts-color-negative: var(--vaadin-charts-color-9);
+}
