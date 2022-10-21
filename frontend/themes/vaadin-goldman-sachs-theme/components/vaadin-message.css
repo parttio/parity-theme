@@ -1,0 +1,16 @@
+:host {
+    padding: calc(var(--lumo-space-s) + 0.1em) 0;
+    box-shadow: inset 0px -1px 0px var(--lumo-contrast-10pct);
+}
+
+:host(:last-of-type) {
+    box-shadow: none;
+}
+
+[part="name"] {
+    font-weight: 600;
+}
+
+[part="message"] {
+    color: var(--lumo-shade-90pct);
+}

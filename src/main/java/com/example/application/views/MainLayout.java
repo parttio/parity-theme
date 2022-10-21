@@ -11,11 +11,13 @@ import com.vaadin.flow.component.html.Footer;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Header;
+import com.vaadin.flow.component.dependency.StyleSheet;
 import com.vaadin.flow.router.PageTitle;
 
 /**
  * The main view is a top-level placeholder for other views.
  */
+@StyleSheet("https://fonts.googleapis.com/icon?family=Material+Icons")
 public class MainLayout extends AppLayout {
 
     private H1 viewTitle;
@@ -71,8 +73,8 @@ public class MainLayout extends AppLayout {
         nav.addItem(new AppNavItem("List Box", ListBoxView.class));
         nav.addItem(new AppNavItem("Log In", LoginView.class));
         nav.addItem(new AppNavItem("Menu Bar", MenuBarView.class));
-        nav.addItem(new AppNavItem("Message Input", MessageInput.class));
-        nav.addItem(new AppNavItem("Message List", MessageList.class));
+        nav.addItem(new AppNavItem("Message Input", MessageInputView.class));
+        nav.addItem(new AppNavItem("Message List", MessageListView.class));
         nav.addItem(new AppNavItem("Notification", NotificationView.class));
         nav.addItem(new AppNavItem("Number Field", NumberFieldView.class));
         nav.addItem(new AppNavItem("Password Field", PasswordFieldView.class));
