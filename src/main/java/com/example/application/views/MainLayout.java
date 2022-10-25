@@ -17,7 +17,6 @@ import com.vaadin.flow.router.PageTitle;
 /**
  * The main view is a top-level placeholder for other views.
  */
-@StyleSheet("https://fonts.googleapis.com/icon?family=Material+Icons")
 public class MainLayout extends AppLayout {
 
     private H1 viewTitle;
