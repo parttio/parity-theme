@@ -5,6 +5,16 @@ The theme is originally built by Daniel Sarkwa, a UX designer working at Vaadin.
 
 To install this add-on, check out the latest version and Maven/Gradle dependency snippets from the [Directory](https://vaadin.com/directory).
 
+After setting the dependency in pom.xml, update your frontend/themes/mytheme/theme.json to have parent configuration
+
+```json
+{
+  "lumoImports" : [ "typography", "color", "spacing", "badge", "utility" ],
+  "parent": "breeze"
+}
+````
+You can still make your own changes on top in the applications theme.
+
 Then change your theme annotation to use Parity: `@Theme("parity")`
 
 To make changes on top of the Parity theme, load project styles located in the "frontend" directory with `@CssImport("./themes/myapp/styles.css")`
