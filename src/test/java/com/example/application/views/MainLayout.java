@@ -1,58 +1,54 @@
 package com.example.application.views;
 
-
 import com.example.application.components.appnav.AppNav;
 import com.example.application.components.appnav.AppNavItem;
-import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
-import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.html.Footer;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Header;
+import com.vaadin.flow.component.orderedlayout.Scroller;
 import com.vaadin.flow.router.PageTitle;
+import com.vaadin.flow.theme.lumo.LumoUtility;
 
 /**
  * The main view is a top-level placeholder for other views.
  */
 public class MainLayout extends AppLayout {
 
-    private H1 viewTitle;
+    private H2 viewTitle;
 
     public MainLayout() {
         setPrimarySection(Section.DRAWER);
-        addToNavbar(true, createHeaderContent());
-        addToDrawer(createDrawerContent());
+        addDrawerContent();
+        addHeaderContent();
     }
 
-    private Component createHeaderContent() {
+    private void addHeaderContent() {
         DrawerToggle toggle = new DrawerToggle();
-        toggle.addClassNames("view-toggle");
-        toggle.addThemeVariants(ButtonVariant.LUMO_CONTRAST);
         toggle.getElement().setAttribute("aria-label", "Menu toggle");
 
-        viewTitle = new H1();
-        viewTitle.addClassNames("view-title");
+        viewTitle = new H2();
+        viewTitle.addClassNames(LumoUtility.FontSize.LARGE, LumoUtility.Margin.NONE);
 
-        Header header = new Header(toggle, viewTitle);
-        header.addClassNames("view-header");
-        return header;
+        addToNavbar(true, toggle, viewTitle);
     }
 
-    private Component createDrawerContent() {
-        H2 appName = new H2("Parity theme test app");
-        appName.addClassNames("app-name");
+    private void addDrawerContent() {
+        H1 appName = new H1("Parity Theme");
+        appName.addClassNames(LumoUtility.FontSize.LARGE, LumoUtility.Margin.NONE);
+        Header header = new Header(appName);
 
-        com.vaadin.flow.component.html.Section section = new com.vaadin.flow.component.html.Section(appName,
-                createNavigation(), createFooter());
-        section.addClassNames("drawer-section");
-        return section;
+        Scroller scroller = new Scroller(createNavigation());
+
+        addToDrawer(header, scroller, createFooter());
     }
 
     private AppNav createNavigation() {
+        // AppNav is not yet an official component.
+        // For documentation, visit https://github.com/vaadin/vcf-nav#readme
         AppNav nav = new AppNav();
-        nav.addClassNames("app-nav");
 
         nav.addItem(new AppNavItem("Accordion", AccordionView.class));
         nav.addItem(new AppNavItem("Avatar", AvatarView.class));
@@ -94,7 +90,6 @@ public class MainLayout extends AppLayout {
 
     private Footer createFooter() {
         Footer layout = new Footer();
-        layout.addClassNames("app-nav-footer");
 
         return layout;
     }

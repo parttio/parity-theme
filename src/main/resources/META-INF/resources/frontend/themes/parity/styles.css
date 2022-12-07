@@ -1,4 +1,5 @@
 @import url('./main-layout.css');
+@import url('./app-layout.css');
 @import url('./components/badge.css');
 
 html {
