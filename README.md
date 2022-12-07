@@ -10,7 +10,7 @@ After setting the dependency in pom.xml, update your frontend/themes/mytheme/the
 ```json
 {
   "lumoImports" : [ "typography", "color", "spacing", "badge", "utility" ],
-  "parent": "breeze"
+  "parent": "parity"
 }
 ````
 You can still make your own changes on top in the applications theme.
