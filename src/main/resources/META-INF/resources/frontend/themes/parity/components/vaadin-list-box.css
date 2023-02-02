@@ -23,7 +23,7 @@
 }
 
 :host ::slotted(vaadin-item[selected]:hover:not([disabled])) {
-    background-color: var(--lumo-primary-color-20pct);
+    background-color: var(--lumo-primary-color-30pct);
 }
 
 :host([theme~="padding-small"]) ::slotted(vaadin-item) {

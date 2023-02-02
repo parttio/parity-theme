@@ -1,59 +1,130 @@
 @import url('./main-layout.css');
-@import url('./app-layout.css');
+@import url('components/app-layout.css');
 @import url('./components/badge.css');
 
 html {
+    --lumo-base-color: #ffffff;
     --lumo-primary-color: #186ADE;
-    --lumo-primary-color-10pct: #D4E4FA;
-    --lumo-primary-color-20pct: #BED7FA;
-    --lumo-primary-color-20pct: #C6DAF5;
-    --lumo-primary-color-50pct: #525fe8;
-
+    --lumo-primary-text-color: rgb(24, 106, 222);
+    --lumo-primary-color-50pct: rgba(24, 106, 222, 0.5);
+    --lumo-primary-color-30pct: rgba(24, 106, 222, 0.3);
+    --lumo-primary-color-10pct: rgba(24, 106, 222, 0.2);
+    --lumo-success-text-color: rgb(7, 125, 85);
+    --lumo-success-color-50pct: rgba(7, 125, 85, 0.5);
+    --lumo-success-color-10pct: rgba(7, 125, 85, 0.1);
     --lumo-success-color: #077D55;
-    --lumo-success-color-10pct: #EBF7ED;
-
+    --lumo-error-text-color: rgb(217, 31, 17);
+    --lumo-error-color-50pct: rgba(217, 31, 17, 0.5);
+    --lumo-error-color-10pct: rgba(217, 31, 17, 0.1);
     --lumo-error-color: #D91F11;
-    --lumo-error-color-10pct: #FCF3F2;
-
-    --lumo-information-color: var(--lumo-primary-color);
-    --lumo-information-color-10pct: #F0F4FA;
-    --lumo-information-contrast-color: var(--lumo-primary-contrast-color);
-
-    --lumo-warning-color: #F5C518;
-    --lumo-warning-color-10pct: #FAF6CF;
-    --lumo-warning-contrast-color: var(--lumo-contrast);
-
-    --lumo-shade-5pct: #ECEFF2;
-    --lumo-shade-10pct: #DCE3E8;
-    --lumo-shade-20pct: #D4D9DC;
-    --lumo-shade-30pct: #9FB1BD;
-    --lumo-shade-70pct: #5B7282;
-    --lumo-shade-80pct: #3E5463;
-    --lumo-shade-90pct: #3B5C72;
-
-    --lumo-contrast-5pct: var(--lumo-shade-10pct);
-    --lumo-contrast-40pct: var(--lumo-shade-30pct);
-    --lumo-contrast-50pct: #7A909E;
-    --lumo-contrast: #1C2B36;
-
-    --lumo-primary-text-color: var(--lumo-primary-color);
-    --lumo-disabled-text-color: #B4C2CC;
-
-    --gm-info-color: #0D1826;
-    --gm-primary-dark-color: #0D4EA6;
-    --gm-divider-color: var(--lumo-shade-10pct);
-    --gm-tint-90pct: #F2F5F7;
-    --gm-iconalone-color: #3E5463;
-
+    --lumo-shade-5pct: #E8EBED;
+    --lumo-shade-10pct: #DDE3E7;
+    --lumo-shade-20pct: #C3CCD5;
+    --lumo-shade-30pct: #A2B0BC;
+    --lumo-shade-40pct: #7E8F9D;
+    --lumo-shade-50pct: #607180;
+    --lumo-shade-60pct: #435361;
+    --lumo-shade-70pct: #2F3E4C;
+    --lumo-shade-80pct: #1F2B35;
+    --lumo-shade-90pct: #10171E;
+    --lumo-shade: #0A0F14;
+    --lumo-contrast-5pct: var(--lumo-shade-5pct);
+    --lumo-contrast-10pct: var(--lumo-shade-10pct);
+    --lumo-contrast-20pct: var(--lumo-shade-20pct);
+    --lumo-contrast-30pct: var(--lumo-shade-30pct);
+    --lumo-contrast-40pct: var(--lumo-shade-40pct);
+    --lumo-contrast-50pct: var(--lumo-shade-50pct);
+    --lumo-contrast-60pct: var(--lumo-shade-60pct);
+    --lumo-contrast-70pct: var(--lumo-shade-70pct);
+    --lumo-contrast-80pct: var(--lumo-shade-80pct);
+    --lumo-contrast-90pct: var(--lumo-shade-90pct);
+    --lumo-contrast: var(--lumo-shade);
+    --lumo-body-text-color: var(--lumo-contrast);
+    --lumo-secondary-text-color: var(--lumo-shade-80pct);
+    --lumo-disabled-text-color: #6b757c;
     --lumo-font-size-l: 16px;
     --lumo-font-size-m: 14px;
     --lumo-font-size-xs: 11px;
     --lumo-font-size-xxxs: 8px;
     --lumo-border-radius: 2px;
     --lumo-size-m: 32px;
-
     --lumo-size-l: 40px;
-    --lumo-body-text-color: var(--lumo-contrast);
+
+    --gm-information-color: var(--lumo-primary-color);
+    --gm-information-color-10pct: #F0F4FA;
+    --gm-information-contrast-color: var(--lumo-primary-contrast-color);
+    --gm-warning-color: #F5C518;
+    --gm-warning-color-10pct: #FAF6CF;
+    --gm-warning-contrast-color: var(--lumo-contrast);
+    --gm-info-color: #0D1826;
+    --gm-primary-dark-color: #0D4EA6;
+    --gm-divider-color: var(--lumo-shade-10pct);
+    --gm-app-header-color: #11294D;
+    --gm-surface-primary-color: #F2F5F7;
+    --gm-notification-bgcolor: var(--lumo-base-color) linear-gradient(var(--lumo-shade-70pct), var(--lumo-shade-70pct));
+    --gm-grid-secondary-border-color: var(--lumo-contrast-20pct);
+}
+
+[theme~="dark"] {
+    --lumo-base-color: #0e171f;
+    --lumo-primary-text-color: rgb(62, 141, 245);
+    --lumo-primary-color-50pct: rgba(62, 141, 245, 0.5);
+    --lumo-primary-color-30pct: rgba(62, 141, 245, 0.3);
+    --lumo-primary-color-10pct: rgba(62, 141, 245, 0.2);
+    --lumo-primary-color: #3e8df5;
+    --lumo-error-text-color: rgb(249, 82, 67);
+    --lumo-error-color-50pct: rgba(249, 82, 67, 0.5);
+    --lumo-error-color-10pct: rgba(249, 82, 67, 0.1);
+    --lumo-error-color: #f95243;
+    --lumo-success-text-color: rgb(22, 161, 98);
+    --lumo-success-color-50pct: rgba(22, 161, 98, 0.5);
+    --lumo-success-color-10pct: rgba(22, 161, 98, 0.1);
+    --lumo-success-color: #16a162;
+    --lumo-shade-5pct: hsla(214, 0%, 0%, 0.12);
+    --lumo-shade-10pct: hsla(214, 4%, 2%, 0.15);
+    --lumo-shade-20pct: hsla(214, 8%, 4%, 0.23);
+    --lumo-shade-30pct: hsla(214, 12%, 6%, 0.32);
+    --lumo-shade-40pct: hsla(214, 16%, 8%, 0.41);
+    --lumo-shade-50pct: hsla(214, 20%, 10%, 0.5);
+    --lumo-shade-60pct: hsla(214, 24%, 12%, 0.6);
+    --lumo-shade-70pct: hsla(214, 28%, 13%, 0.7);
+    --lumo-shade-80pct: hsla(214, 32%, 13%, 0.8);
+    --lumo-shade-90pct: hsla(214, 33%, 13%, 0.9);
+    --lumo-shade: hsl(214, 33%, 13%);
+    --lumo-tint-5pct: hsla(214, 65%, 85%, 0.06);
+    --lumo-tint-10pct: hsla(214, 60%, 80%, 0.14);
+    --lumo-tint-20pct: hsla(214, 64%, 82%, 0.23);
+    --lumo-tint-30pct: hsla(214, 69%, 84%, 0.32);
+    --lumo-tint-40pct: hsla(214, 73%, 86%, 0.41);
+    --lumo-tint-50pct: hsla(214, 78%, 88%, 0.5);
+    --lumo-tint-60pct: hsla(214, 82%, 90%, 0.6);
+    --lumo-tint-70pct: hsla(214, 87%, 92%, 0.7);
+    --lumo-tint-80pct: hsla(214, 91%, 94%, 0.8);
+    --lumo-tint-90pct: hsla(214, 96%, 96%, 0.9);
+    --lumo-tint: hsl(214, 100%, 98%);
+    --lumo-contrast-5pct: var(--lumo-tint-5pct);
+    --lumo-contrast-10pct: var(--lumo-tint-10pct);
+    --lumo-contrast-20pct: var(--lumo-tint-20pct);
+    --lumo-contrast-30pct: var(--lumo-tint-30pct);
+    --lumo-contrast-40pct: var(--lumo-tint-40pct);
+    --lumo-contrast-50pct: var(--lumo-tint-50pct);
+    --lumo-contrast-60pct: var(--lumo-tint-60pct);
+    --lumo-contrast-70pct: var(--lumo-tint-70pct);
+    --lumo-contrast-80pct: var(--lumo-tint-80pct);
+    --lumo-contrast-90pct: var(--lumo-tint-90pct);
+    --lumo-contrast: var(--lumo-tint);
+    --lumo-secondary-text-color: var(--lumo-contrast-80pct);
+    --lumo-disabled-text-color: #565e64;
+
+    --gm-information-color-10pct: #0e213e;
+    --gm-warning-color-10pct: #cbc479;
+    --gm-app-header-color: #04090c;
+    --gm-surface-primary-color: #1a252d;
+    --gm-divider-color: var(--lumo-contrast-5pct);
+    --gm-info-color: #0b2039;
+    --gm-primary-dark-color: #488fee;
+    --gm-notification-bgcolor: var(--lumo-base-color) linear-gradient(var(--lumo-contrast-40pct), var(--lumo-contrast-40pct));
+    --gm-grid-secondary-border-color: var(--lumo-contrast-10pct);
 }
 
 vaadin-select-list-box hr {

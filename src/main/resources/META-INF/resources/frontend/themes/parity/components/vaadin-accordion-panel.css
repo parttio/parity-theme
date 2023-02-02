@@ -1,5 +1,5 @@
 :host {
-    border-bottom: solid 1px var(--lumo-shade-30pct);
+    border-bottom: solid 1px var(--lumo-contrast-10pct);
 }
 
 [part="summary"],
@@ -26,5 +26,6 @@
 }
 
 :host([theme~="filled"]) {
+    background-color: var(--lumo-contrast-10pct);
     border-radius: 0;
 }

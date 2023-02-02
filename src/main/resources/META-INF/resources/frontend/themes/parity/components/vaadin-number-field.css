@@ -10,9 +10,13 @@
 }
 
 [part='label'] {
-    color: var(--lumo-shade-80pct);
+    color: var(--lumo-contrast-80pct);
     font-weight: 600;
     font-size: var(--lumo-font-size-m);
+}
+
+[part="input-field"] ::slotted(input) {
+    padding-left: var(--lumo-space-s);
 }
 
 [part="decrease-button"]::before {
@@ -28,7 +32,7 @@
     position: absolute;
     right: 0px;
     top: 0;
-    border-bottom: 1px solid var(--lumo-shade-10pct);
+    border-bottom: 1px solid var(--lumo-contrast-10pct);
 }
 
 :host([has-controls]) [part='decrease-button'] {
@@ -41,7 +45,7 @@
 
 :host([has-controls]) [part='decrease-button'],
 :host([has-controls]) [part='increase-button'] {
-    border-left: 1px solid var(--lumo-shade-10pct);
+    border-left: 1px solid var(--lumo-contrast-10pct);
     width: calc(var(--lumo-text-field-size) / 1.5);
 }
 

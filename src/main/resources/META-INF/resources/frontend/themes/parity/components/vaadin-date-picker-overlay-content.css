@@ -4,12 +4,17 @@
     justify-content: flex-start;
     border-top: 1px solid var(--gm-divider-color);
     margin-right: 0;
-    background-color: var(--lumo-tint);
     border-radius: 0 0 var(--lumo-border-radius) var(--lumo-border-radius);
+    background-color: var(--lumo-base-color);
+    background-image: linear-gradient(var(--lumo-tint-5pct), var(--lumo-tint-5pct));
 }
 
 [part="today-button"] {
     color: var(--lumo-primary-color);
+}
+
+[part="cancel-button"] {
+    color: var(--lumo-contrast-90pct);
 }
 
 [part="years"] [part="year-number"][current] {

@@ -10,7 +10,3 @@
 [part="name"] {
     font-weight: 600;
 }
-
-[part="message"] {
-    color: var(--lumo-shade-90pct);
-}

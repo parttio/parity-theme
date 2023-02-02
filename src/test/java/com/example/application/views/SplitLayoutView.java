@@ -1,13 +1,10 @@
 package com.example.application.views;
 
-import com.vaadin.demo.domain.DataService;
-import com.vaadin.demo.domain.Person;
-import com.vaadin.flow.component.grid.Grid;
+import com.vaadin.flow.component.html.Div;
+import com.vaadin.flow.component.html.H4;
+import com.vaadin.flow.component.html.H5;
 import com.vaadin.flow.component.splitlayout.SplitLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-import com.vaadin.flow.component.formlayout.FormLayout;
-import com.vaadin.flow.component.textfield.PasswordField;
-import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
@@ -18,40 +15,50 @@ import java.util.List;
 public class SplitLayoutView extends VerticalLayout {
 
     public SplitLayoutView() {
-        Grid master = MasterContent();
+        horizontalOrientation();
+        verticalOrientation();
+    }
 
-        FormLayout detail = FormLayout();
+    private Void horizontalOrientation() {
+        H4 groupHeading = new H4("Horizontal Orientation");
 
-        SplitLayout splitLayout = new SplitLayout(master, detail);
+        Div panel1 = panel("var(--lumo-shade-20pct)");
+        Div panel2 = panel("var(--lumo-shade-70pct)");
+
+        SplitLayout splitLayout = new SplitLayout(panel1, panel2);
+        splitLayout.setOrientation(SplitLayout.Orientation.HORIZONTAL);
 
         splitLayout.setHeightFull();
-        add(splitLayout);
+
+        VerticalLayout layout = new VerticalLayout(groupHeading, splitLayout);
+        add(layout);
+
+        return null;
     }
 
-    private Grid MasterContent() {
-        Grid<Person> grid = new Grid<>(Person.class, false);
-        grid.addColumn(Person::getFirstName).setHeader("First name");
-        grid.addColumn(Person::getLastName).setHeader("Last name");
-        grid.addColumn(Person::getEmail).setHeader("Email");
-        grid.addColumn(Person::getProfession).setHeader("Profession");
+    private Void verticalOrientation() {
+        H4 groupHeading = new H4("Vertical Orientation");
 
-        List<Person> people = DataService.getPeople();
-        grid.setItems(people);
+        Div panel1 = panel("var(--lumo-shade-20pct)");
+        Div panel2 = panel("var(--lumo-shade-70pct)");
 
-        return grid;
+        SplitLayout splitLayout = new SplitLayout(panel1, panel2);
+        splitLayout.setOrientation(SplitLayout.Orientation.VERTICAL);
+
+        splitLayout.setHeightFull();
+
+        VerticalLayout layout = new VerticalLayout(groupHeading, splitLayout);
+        add(layout);
+
+        return null;
     }
 
-    private FormLayout FormLayout() {
-        TextField firstName = new TextField("First name");
-        TextField lastName = new TextField("Last name");
-        TextField username = new TextField("Username");
-        PasswordField password = new PasswordField("Password");
-        PasswordField confirmPassword = new PasswordField("Confirm password");
+    public Div panel(String color) {
+        Div panel = new Div();
+        panel.setWidth("400px");
+        panel.setHeight("400px");
+        panel.getElement().getStyle().set("background", color);
 
-        FormLayout formLayout = new FormLayout();
-        formLayout.add(firstName, lastName, username, password,
-                confirmPassword);
-
-        return formLayout;
+        return panel;
     }
 }

@@ -12,3 +12,7 @@
 [part="toggle-button"] {
     color: var(--lumo-contrast);
 }
+
+:host([focused]:not([readonly])) [part='input-field'] {
+    border-color: var(--lumo-primary-color);
+}

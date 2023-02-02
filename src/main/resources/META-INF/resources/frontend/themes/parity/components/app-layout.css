@@ -3,7 +3,7 @@ vaadin-app-layout[primary-section="navbar"]::part(navbar)::before {
 }
 
 vaadin-app-layout[primary-section="drawer"]::part(navbar)::before {
-    background: #11294D;
+    background: var(--gm-app-header-color);
     opacity: 1;
 }
 
@@ -12,7 +12,7 @@ vaadin-app-layout[primary-section="drawer"]::part(navbar) {
 }
 
 vaadin-app-layout[primary-section="drawer"]:not([overlay])::part(drawer) {
-    background: var(--gm-tint-90pct);
+    background: var(--gm-surface-primary-color);
     border: 0;
     box-shadow: 1px 0 0 0 var(--lumo-contrast-10pct), 1px 0 0 0 var(--lumo-base-color);
     z-index: 1;
@@ -20,7 +20,7 @@ vaadin-app-layout[primary-section="drawer"]:not([overlay])::part(drawer) {
 
 vaadin-app-layout > h2,
 vaadin-drawer-toggle[slot="navbar"] {
-    color: var(--lumo-base-color);
+    color: var(--lumo-tint);
 }
 
 ::part(navbar) {

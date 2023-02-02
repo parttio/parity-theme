@@ -30,7 +30,7 @@
     content: "";
     width: 1em;
     height: 1em;
-    background-color: white;
+    background-color: linear-gradient(var(--lumo-tint-5pct), var(--lumo-tint-5pct));
     margin: calc((1 - var(--lumo-line-height-xs)) * var(--lumo-font-size-m) / 2) 0;
     display: inline-block;
     border: 1px solid var(--lumo-contrast-40pct);

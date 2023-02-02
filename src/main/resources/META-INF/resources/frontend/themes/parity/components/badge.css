@@ -1,7 +1,8 @@
 [theme~="badge"] {
-    --_gm-style-color: var(--lumo-shade-70pct);
-    --_gm-subtle-text-color: var(--lumo-contrast-color);
-    --_gm-subtle-background-color: var(--lumo-primary-color-10pct);
+    --_gm-style-color: var(--lumo-contrast-50pct);
+    --_gm-subtle-text-color: var(--_gm-style-color);
+    --_gm-subtle-background-color: var(--lumo-contrast-10pct);
+    --_gm-minimal-text-color: var(--_gm-style-color);
     height: fit-content;
     color: var(--lumo-primary-contrast-color);
     background-color: var(--_gm-style-color);
@@ -17,6 +18,7 @@
     --_gm-style-color: var(--lumo-success-color);
     --_gm-subtle-text-color: var(--_gm-style-color);
     --_gm-subtle-background-color: var(--lumo-success-color-10pct);
+    --_gm-minimal-text-color: var(--_gm-style-color);
     color: var(--lumo-success-contrast-color);
     background-color: var(--_gm-style-color);
 }
@@ -25,24 +27,26 @@
     --_gm-style-color: var(--lumo-error-color);
     --_gm-subtle-text-color: var(--_gm-style-color);
     --_gm-subtle-background-color: var(--lumo-error-color-10pct);
+    --_gm-minimal-text-color: var(--_gm-style-color);
     color: var(--lumo-error-contrast-color);
     background-color: var(--_gm-style-color);
 }
 
 [theme~="badge"][theme~="information"] {
-    --_gm-style-color: var(--lumo-information-color);
+    --_gm-style-color: var(--gm-information-color);
     --_gm-subtle-text-color: var(--_gm-style-color);
-    --_gm-subtle-background-color: var(--lumo-information-color-10pct);
-    color: var(--lumo-information-contrast-color);
+    --_gm-subtle-background-color: var(--gm-information-color-10pct);
+    --_gm-minimal-text-color: var(--_gm-style-color);
+    color: var(--gm-information-contrast-color);
     background-color: var(--_gm-style-color);
 }
 
 [theme~="badge"][theme~="warning"] {
-    --_gm-style-color: var(--lumo-warning-color);
-    --_gm-subtle-text-color: var(--lumo-warning-contrast-color);
-    --_gm-subtle-background-color: var(--lumo-warning-color-10pct);
-    --_gm-minimal-text-color: #D9A514;
-    color: var(--lumo-warning-contrast-color);
+    --_gm-style-color: var(--gm-warning-color);
+    --_gm-subtle-text-color: var(--gm-warning-contrast-color);
+    --_gm-subtle-background-color: var(--gm-warning-color-10pct);
+    --_gm-minimal-text-color: var(--_gm-style-color);
+    color: var(--gm-warning-contrast-color);
     background-color: var(--_gm-style-color);
 }
 
@@ -54,7 +58,7 @@
 [theme~="badge"][theme~="minimal"] {
     color: var(--_gm-minimal-text-color);
     background: none;
-    border: 1px solid var(--lumo-shade-30pct);
+    border: 1px solid var(--lumo-contrast-30pct);
 }
 
 [theme~="badge"][theme~="large"] {

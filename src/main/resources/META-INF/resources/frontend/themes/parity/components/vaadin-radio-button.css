@@ -10,13 +10,13 @@
 [part="radio"] {
     width: 14px;
     height: 14px;
-    background: white;
+    background: transparent;
     border: 1px solid var(--lumo-contrast-40pct);
 }
 
 :host([checked]) [part="radio"] {
-    border: 1px solid var(--lumo-contrast);
-    background-color: var(--lumo-primary-contrast-color);
+    border: 1px solid var(--lumo-contrast-40pct);
+    background-color: var(--lumo-base-color);
 }
 
 [part="radio"]::after {
@@ -24,6 +24,6 @@
 }
 
 :host(:not([checked]):not([disabled]):hover) [part="radio"] {
-  background-color: var(--lumo-tint);
+  background-color: transparent;
   border-color: var(--lumo-contrast-50pct);
 }

@@ -1,7 +1,7 @@
 [part='input-field'],
 :host(:hover:not([readonly]):not([focused]):not([invalid])) [part="input-field"]::after {
-    background-color: var(--lumo-tint);
-    border: 1px solid var(--lumo-contrast-40pct);
+    background-color: transparent;
+    border: 1px solid var(--lumo-contrast-60pct);
 }
 
 :host([focused]:not([readonly])) [part='input-field'] {
@@ -9,10 +9,10 @@
 }
 
 [part='helper-text'] {
-    color: var(--lumo-shade-80pct);
+    color: var(--lumo-contrast-80pct);
 }
 
 ::slotted(:is(input, textarea):placeholder-shown) {
-    color: var(--lumo-contrast-40pct);
+    color: var(--lumo-contrast-50pct);
     font-weight: 400;
 }

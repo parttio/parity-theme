@@ -19,7 +19,7 @@
 }
 
 [part='input-field'] ::slotted(:not(iron-icon):not(vaadin-icon):not(input):not(textarea)) {
-    color: var(--lumo-shade-80pct);
+    color: var(--lumo-contrast-80pct);
     font-weight: 500;
     font-size: 12px;
     padding-left: 3.4px;

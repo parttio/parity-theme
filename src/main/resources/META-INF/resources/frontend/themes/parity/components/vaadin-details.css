@@ -22,5 +22,6 @@
 }
 
 :host([theme~="filled"]) {
+    background-color: var(--lumo-contrast-10pct);
     border-radius: 0;
 }

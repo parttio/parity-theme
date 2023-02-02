@@ -10,7 +10,7 @@
     width: 14px;
     height: 14px;
     margin: 2px;
-    background: white;
+    background: transparent;
     border: 1px solid var(--lumo-contrast-40pct);
     border-radius: 0;
     box-sizing: border-box;
@@ -36,6 +36,6 @@
 }
 
 :host(:not([checked]):not([indeterminate]):not([disabled]):hover) [part="checkbox"] {
-  background-color: var(--lumo-tint);
-  border-color: var(--lumo-contrast-50pct);
+    background-color: transparent;
+    border-color: var(--lumo-contrast-50pct);
 }

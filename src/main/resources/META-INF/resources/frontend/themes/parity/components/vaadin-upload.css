@@ -1,6 +1,7 @@
 :host(:not([nodrop])) {
     border: 1px solid var(--lumo-contrast-10pct);
     border-radius: 0;
+    transition: background-color 0.6s;
 }
 
 [part="file-list"] > :first-child {

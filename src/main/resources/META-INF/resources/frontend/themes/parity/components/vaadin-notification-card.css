@@ -1,7 +1,7 @@
 [part="overlay"] {
-    color: var(--lumo-base-color);
+    color: var(--lumo-tint);
     font-weight: 500;
-    background: var(--lumo-base-color) linear-gradient(var(--lumo-shade-70pct), var(--lumo-shade-70pct));
+    background: var(--gm-notification-bgcolor);
     border-radius: var(--lumo-border-radius);
     box-shadow: none;
 }

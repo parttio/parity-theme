@@ -1,7 +1,7 @@
 :host {
     font-weight: 600;
     color: var(--lumo-contrast);
-    background-color: var(--lumo-shade-10pct);
+    background-color: var(--lumo-contrast-10pct);
 }
 
 :host(:first-of-type) {

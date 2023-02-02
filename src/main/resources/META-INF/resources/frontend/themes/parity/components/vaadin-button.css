@@ -19,17 +19,22 @@
 }
 
 :host([theme~="info"]) {
-    --_gm-emphasis-text-color: var(--gm-info-color);
+    --_gm-emphasis-text-color: var(--lumo-contrast);
     --_gm-emphasis-border-color: var(--gm-info-color);
     color: var(--lumo-tint);
     background: var(--gm-info-color);
 }
 
+html[theme~="dark"] :host([theme~="info"]) {
+    --_gm-emphasis-text-color: var(--lumo-contrast-60pct);
+    --_gm-emphasis-border-color: var(--lumo-contrast-60pct);
+}
+
 :host([theme~="contrast"]) {
-    --_gm-emphasis-text-color: var(--lumo-tint);
-    --_gm-emphasis-border-color: var(--lumo-tint);
-    color: var(--lumo-contrast);
-    background: var(--lumo-tint);
+    --_gm-emphasis-text-color: var(--lumo-tint-90pct);
+    --_gm-emphasis-border-color: var(--lumo-tint-90pct);
+    color: var(--lumo-shade);
+    background: var(--lumo-tint-90pct);
 }
 
 :host([theme~="destructive"]) {

@@ -63,11 +63,13 @@
 }
 
 .appearanceLayout {
-    padding: 3px 4px;
-    background: #F3F3F3;
+  padding: 10px;
+  background: var(--lumo-shade-30pct);
+  border-radius: var(--lumo-border-radius-m);
 }
 
 .contrastLayout {
-    padding: 3px 4px;
-    background: #5b7181;
+  padding: 5px 10px;
+  background: var(--lumo-shade-50pct);
+  border-radius: var(--lumo-border-radius-m);
 }

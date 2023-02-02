@@ -4,10 +4,16 @@ import com.example.application.components.appnav.AppNav;
 import com.example.application.components.appnav.AppNavItem;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
+import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.html.Footer;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Header;
+import com.vaadin.flow.component.icon.VaadinIcon;
+import com.vaadin.flow.component.orderedlayout.FlexComponent;
+import com.vaadin.flow.component.orderedlayout.FlexLayout;
+import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.Scroller;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.theme.lumo.LumoUtility;
@@ -23,6 +29,30 @@ public class MainLayout extends AppLayout {
         setPrimarySection(Section.DRAWER);
         addDrawerContent();
         addHeaderContent();
+
+        Button switchMode = new Button();
+        switchMode.addThemeVariants(ButtonVariant.LUMO_TERTIARY);
+        switchMode.addThemeVariants(ButtonVariant.LUMO_PRIMARY, ButtonVariant.LUMO_CONTRAST);
+        switchMode.setIcon(VaadinIcon.MOON.create());
+        switchMode.setText("Dark mode");
+        switchMode.addClickListener(e -> {
+            if (this.getUI().get().getElement().hasAttribute("theme")) {
+                this.getUI().get().getElement().removeAttribute("theme");
+                switchMode.setIcon(VaadinIcon.MOON.create());
+                switchMode.setText("Dark mode");
+            } else {
+                this.getUI().get().getElement().setAttribute("theme", "dark");
+                switchMode.setIcon(VaadinIcon.SUN_O.create());
+                switchMode.setText("Light mode");
+                switchMode.getStyle().set("color", "white");
+            }
+        });
+
+        HorizontalLayout headerContainer = new HorizontalLayout(switchMode);
+        headerContainer.setAlignItems(FlexComponent.Alignment.END);
+        headerContainer.getStyle().set("margin-left", "10px");
+
+        addToNavbar(headerContainer);
     }
 
     private void addHeaderContent() {

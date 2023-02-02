@@ -1,3 +1,7 @@
+:host {
+    --_lumo-grid-secondary-border-color: var(--gm-grid-secondary-border-color);
+}
+
 :host(:not([theme~="no-row-borders"])) [part="row"][first] [part~="cell"]:not([part~="details-cell"]),
 [part~="cell"] {
     min-height: calc(var(--lumo-size-l) - 0.357rem);
@@ -13,11 +17,11 @@
 [part~="reorder-ghost"] {
     font-size: var(--lumo-font-size-m);
     font-weight: 500;
-    color: var(--lumo-shade-80pct);
+    color: var(--lumo-body-text-color);
 }
 
 :host([theme~="row-stripes"]) [part~="row"]:not([odd]) [part~="body-cell"],
 :host([theme~="row-stripes"]) [part~="row"]:not([odd]) [part~="details-cell"] {
-    background-image: linear-gradient(var(--gm-tint-90pct), var(--gm-tint-90pct));
+    background-image: linear-gradient(var(--gm-surface-primary-color), var(--gm-surface-primary-color));
     background-repeat: repeat-x;
 }

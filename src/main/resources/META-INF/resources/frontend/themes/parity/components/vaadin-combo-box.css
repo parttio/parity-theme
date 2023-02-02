@@ -6,10 +6,10 @@
 }
 
 [part="toggle-button"] {
-    color: var(--lumo-shade-30pct);
+  color: var(--lumo-contrast-40pct);
 }
 
 :host([opened]) [part="toggle-button"] {
-    transform: rotate(180deg);
-    color: var(--lumo-contrast);
+  transform: rotate(180deg);
+  color: var(--lumo-contrast);
 }

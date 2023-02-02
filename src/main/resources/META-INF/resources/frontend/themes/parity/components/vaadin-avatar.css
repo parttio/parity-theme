@@ -1,6 +1,6 @@
 :host {
-    color: var(--gm-iconalone-color);
-    background-color: var(--lumo-contrast-5pct);
+    color: var(--lumo-contrast-70pct);
+    background-color: var(--lumo-contrast-10pct);
 }
 
 [part="abbr"] {

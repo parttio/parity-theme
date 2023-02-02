@@ -1,3 +1,7 @@
 [part="handle"]::after {
-    background-color: var(--lumo-shade-30pct);
+    background-color: var(--lumo-contrast-40pct);
+}
+
+[part='splitter'] {
+    background-color: var(--lumo-contrast-10pct);
 }

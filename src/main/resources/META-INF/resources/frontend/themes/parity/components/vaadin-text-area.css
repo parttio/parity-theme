@@ -7,28 +7,32 @@
 }
 
 :host(:hover:not([readonly]):not([focused]):not([invalid])) [part="input-field"] {
-    background-color: var(--lumo-tint);
+    background-color: transparent;
 }
 
 :host([theme~="large"]) {
-  font-size: var(--lumo-font-size-l);
-  --lumo-text-field-size: var(--lumo-size-l);
+    font-size: var(--lumo-font-size-l);
+    --lumo-text-field-size: var(--lumo-size-l);
 }
 
 :host([theme~="large"]) [part="label"] {
-  font-size: var(--lumo-font-size-l);
+    font-size: var(--lumo-font-size-l);
 }
 
 :host([theme~="large"]) [part="helper-text"] {
-  font-size: var(--lumo-font-size-s);
+    font-size: var(--lumo-font-size-s);
 }
 
 :host([theme~="readonly"]) [part="input-field"] {
-    background-color: var(--lumo-shade-20pct);
-    border-color: var(--lumo-contrast-5pct);
+    background-color: var(--lumo-contrast-5pct);
+    border: 1px solid var(--lumo-contrast-20pct);
+}
+
+:host([readonly]) {
+    color: var(--lumo-contrast-50pct);
 }
 
 :host([readonly]) [part="input-field"] {
-    background-color: var(--lumo-shade-20pct);
-    border: 1px solid var(--lumo-shade-10pc);
+    background-color: var(--lumo-contrast-5pct);
+    border: 1px dashed var(--lumo-contrast-20pct);
 }

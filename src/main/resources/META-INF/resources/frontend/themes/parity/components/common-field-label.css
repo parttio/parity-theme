@@ -1,5 +1,5 @@
 [part='label'] {
-    color: var(--lumo-shade-80pct);
+    color: var(--lumo-secondary-text-color);
     font-weight: 500;
     font-size: var(--lumo-font-size-m);
 }
@@ -9,5 +9,5 @@
 }
 
 :host([focused]:not([readonly]):not([disabled])) [part='label'] {
-    color: var(--lumo-shade-80pct);
+    color: var(--lumo-contrast-80pct);
 }
