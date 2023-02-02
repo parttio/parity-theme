@@ -4,7 +4,7 @@
     <groupId>org.vaadin.addons.parttio</groupId>
     <artifactId>parity-theme</artifactId>
     <name>Parity Theme</name>
-    <version>1.0.4-SNAPSHOT</version>
+    <version>1.0.4</version>
     <packaging>jar</packaging>
 
     <properties>
@@ -33,7 +33,7 @@
         <url>https://github.com/parttio/parity-theme</url>
         <connection>scm:git:git://github.com/parttio/parity-theme.git</connection>
         <developerConnection>scm:git:ssh://git@github.com:/parttio/parity-theme.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>parity-theme-1.0.4</tag>
     </scm>
     <dependencyManagement>
         <dependencies>
