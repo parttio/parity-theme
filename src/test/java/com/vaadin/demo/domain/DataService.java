@@ -14,7 +14,7 @@ public class DataService {
     public static <T> T getItems(Class<T> clazz, String dataFileName) {
         ObjectMapper mapper = new ObjectMapper();
         try {
-            InputStream stream = new ClassPathResource("data/" + dataFileName)
+            InputStream stream = new ClassPathResource("/META-INF/resources/" + dataFileName)
                     .getInputStream();
             return mapper.readValue(stream, clazz);
         } catch (Exception e) {

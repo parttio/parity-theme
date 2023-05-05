@@ -13,7 +13,6 @@ import com.vaadin.flow.router.RouteAlias;
 
 @PageTitle("Button")
 @Route(value = "button", layout = MainLayout.class)
-@RouteAlias(value = "", layout = MainLayout.class)
 public class ButtonView extends VerticalLayout {
 
     public ButtonView() {

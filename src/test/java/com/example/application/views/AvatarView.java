@@ -11,9 +11,10 @@ import com.vaadin.flow.router.Route;
 @Route(value = "avatar", layout = MainLayout.class)
 public class AvatarView extends VerticalLayout {
 
-    private Person person = DataService.getPeople(1).get(0);
+    private Person person = null;
 
     public AvatarView() {
+        person = DataService.getPeople(1).get(0);
         String name = person.getFirstName() + " " + person.getLastName();
         String pictureUrl = person.getPictureUrl();
 

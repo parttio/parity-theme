@@ -4,7 +4,7 @@ import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.icon.VaadinIcon;
-//import com.vaadin.flow.component.shared.Tooltip;
+import com.vaadin.flow.component.shared.Tooltip;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
@@ -21,12 +21,12 @@ public class TooltipView extends VerticalLayout {
         button.addThemeVariants(ButtonVariant.LUMO_TERTIARY_INLINE,
                 ButtonVariant.LUMO_ICON);
         textField.setSuffixComponent(button);
-/*        textField.setTooltipText("Wrap in “quotes” for exact phrase");
+        textField.setTooltipText("Wrap in “quotes” for exact phrase");
         Tooltip tooltip = textField.getTooltip().withManual(true);
         button.addClickListener(event -> {
             tooltip.setOpened(!tooltip.isOpened());
         });
- */
+
         add(textField);
     }
 }

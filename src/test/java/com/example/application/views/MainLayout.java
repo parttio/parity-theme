@@ -31,8 +31,7 @@ public class MainLayout extends AppLayout {
         addHeaderContent();
 
         Button switchMode = new Button();
-        switchMode.addThemeVariants(ButtonVariant.LUMO_TERTIARY);
-        switchMode.addThemeVariants(ButtonVariant.LUMO_PRIMARY, ButtonVariant.LUMO_CONTRAST);
+        switchMode.addThemeVariants(ButtonVariant.LUMO_TERTIARY, ButtonVariant.LUMO_PRIMARY);
         switchMode.setIcon(VaadinIcon.MOON.create());
         switchMode.setText("Dark mode");
         switchMode.addClickListener(e -> {
@@ -48,11 +47,7 @@ public class MainLayout extends AppLayout {
             }
         });
 
-        HorizontalLayout headerContainer = new HorizontalLayout(switchMode);
-        headerContainer.setAlignItems(FlexComponent.Alignment.END);
-        headerContainer.getStyle().set("margin-left", "10px");
-
-        addToNavbar(headerContainer);
+        addToNavbar(switchMode);
     }
 
     private void addHeaderContent() {
@@ -60,7 +55,7 @@ public class MainLayout extends AppLayout {
         toggle.getElement().setAttribute("aria-label", "Menu toggle");
 
         viewTitle = new H2();
-        viewTitle.addClassNames(LumoUtility.FontSize.LARGE, LumoUtility.Margin.NONE);
+        viewTitle.addClassNames(LumoUtility.FontSize.LARGE, LumoUtility.Margin.NONE, LumoUtility.Flex.GROW);
 
         addToNavbar(true, toggle, viewTitle);
     }
@@ -80,6 +75,7 @@ public class MainLayout extends AppLayout {
         // For documentation, visit https://github.com/vaadin/vcf-nav#readme
         AppNav nav = new AppNav();
 
+        nav.addItem(new AppNavItem("Home", HomeView.class));
         nav.addItem(new AppNavItem("Accordion", AccordionView.class));
         nav.addItem(new AppNavItem("Avatar", AvatarView.class));
         nav.addItem(new AppNavItem("Badge", BadgeView.class));
@@ -102,6 +98,7 @@ public class MainLayout extends AppLayout {
         nav.addItem(new AppNavItem("Notification", NotificationView.class));
         nav.addItem(new AppNavItem("Number Field", NumberFieldView.class));
         nav.addItem(new AppNavItem("Password Field", PasswordFieldView.class));
+        nav.addItem(new AppNavItem("Progress Bar", ProgressBarView.class));
         nav.addItem(new AppNavItem("Radio Button", RadioButtonView.class));
         nav.addItem(new AppNavItem("Rich Text Editor", RichTextEditorBasic.class));
         nav.addItem(new AppNavItem("Select", SelectView.class));
@@ -112,7 +109,6 @@ public class MainLayout extends AppLayout {
         nav.addItem(new AppNavItem("Time Picker", TimePickerView.class));
         nav.addItem(new AppNavItem("Tooltip", TooltipView.class));
         nav.addItem(new AppNavItem("Tree grid", TreeGridView.class));
-        nav.addItem(new AppNavItem("progress Bar", ProgressBarView.class));
         nav.addItem(new AppNavItem("Upload", UploadView.class));
 
         return nav;
