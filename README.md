@@ -3,6 +3,8 @@
 This project provides a Vaadin Theme inspired by the [Goldman Sachs Design System](https://design.gs.com/home).
 The theme is originally built by Daniel Sarkwa, a UX designer working at Vaadin.
 
+[Live demo here](https://v-herd.eu/parttio-parity-theme/).
+
 To install this add-on, check out the latest version and Maven/Gradle dependency snippets from the [Directory](https://vaadin.com/directory).
 
 After setting the dependency in pom.xml, update your frontend/themes/mytheme/theme.json to have parent configuration
